@@ -1,5 +1,8 @@
 package com.coding;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /*Input: arr[] = [100, 200, 300, 400], k = 2
 Output: 700
 Explanation: arr2 + arr3 = 700, which is maximum */
@@ -65,11 +68,52 @@ Explanation: The subarray [4,3] has the minimal length under the problem constra
 		
 	}
 	
+/*You are given a string s consisting only lowercase alphabets and an integer k. 
+ * Your task is to find the length of the longest substring that contains exactly k distinct characters.
+Note : If no such substring exists, return -1. 
+Examples:
+Input: s = "aabacbebebe", k = 3
+Output: 7
+Explanation: The longest substring with exactly 3 distinct characters is "cbebebe", which includes 'c', 'b', and 'e'. */
+	
+	 public static int longestKSubstr(String s, int k) {
+	        // code here
+		 int low=0;
+		 int res=-1;
+		 
+		 Map<Character, Integer> map=new HashMap<>();
+		 for(int high=0;high<s.length();high++) {
+			 
+			 char ch=s.charAt(high);
+			 map.put(ch,map.getOrDefault(ch, 0)+1);
+			 while(map.size() > k)
+			 {
+				 char left=s.charAt(low);
+				 map.put(left, map.get(left)-1);
+				 if(map.get(left)==0)
+				 {
+					 map.remove(left);
+					
+				 }	
+				 low++;	 
+			 }
+				 
+				 //equal k vaule....
+				 if(map.size()==k)
+				 {
+					 res=Math.max(res,high-low+1);
+				 }
+			 
+		 }
+		 
+		 return res;
+	 }
+	
 public static void main(String[] args) {
 	int arr[]= {100, 200, 300, 400};
 	int size=2;
 	System.out.println(maxSubarraySum(arr, size));
-	
 	System.out.println(minSubArrayLen(7,new int[] {2,3,1,2,4,3}));
+	System.out.println(longestKSubstr("aabacbebebe", 3));
 }
 }
