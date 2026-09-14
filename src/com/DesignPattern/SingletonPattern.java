@@ -13,13 +13,13 @@ public class SingletonPattern {
 	{
 		if (singletonPattern == null) {
 			
-			singletonPattern=new SingletonPattern();
+			synchronized (SingletonPattern.class) {
+				singletonPattern=new SingletonPattern();
+			}
+			
 		}
-		
+		 
 		return singletonPattern;
-	}
-	
-	
+	}	
 }
-
 
