@@ -7,6 +7,7 @@ public class SingletonPattern implements Serializable{
 	private static SingletonPattern singletonPattern;
 	
 	
+	
 	private  SingletonPattern() {
     
 //		if (singletonPattern !=null) {
