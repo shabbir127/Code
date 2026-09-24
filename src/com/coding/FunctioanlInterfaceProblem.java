@@ -21,7 +21,6 @@ public class FunctioanlInterfaceProblem {
 		
 		fIP1.DisplayMode("shabbir");
 		example.show();
-		
 	}
 }
 
@@ -56,5 +55,7 @@ interface example1{
 		System.out.println("This is static method");
 	}
 }
+
+
 
 
