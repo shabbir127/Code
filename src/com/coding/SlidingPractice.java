@@ -30,11 +30,42 @@ public class SlidingPractice {
 		
 		return result;
 	}
+	
+	
+	public static int minsubArray(int arr[],int target)
+	{
+		int low=0;
+	
+		int sum=0;
+		int result=Integer.MAX_VALUE;
+		
+		//while(high < arr.length)
+			for(int high=0;high < arr.length;high++)
+		{
+			sum=sum+arr[high];
+			while(sum >=target)
+			{
+				int len=high-low+1;
+				result=Math.min(result, len);
+				sum=sum-arr[low];
+				low++;
+			}
+		high++;
+		}
+		 return result ;
+		
+	}
+	
+	
+
+	
+	
 
 	public static void main(String[] args) {
 		int arr[]= {100,200,300,400};
+		int num[]= {2,3,1,2,4,3};
 	    System.out.println(maxSubArray(arr, 2));
-		
+		System.out.println(minsubArray(num, 7));
 		
 	}
 }
