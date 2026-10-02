@@ -18,5 +18,7 @@ public class StringExample {
 	map.forEach((ch,count)-> System.out.print(ch+ "= "+ count+ " , "));
 
 	System.out.println("\n"+ map.entrySet().stream().max(Map.Entry.comparingByValue()).get());
+	
+	System.out.println();
 	}
 }
