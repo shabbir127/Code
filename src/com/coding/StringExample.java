@@ -20,5 +20,7 @@ public class StringExample {
 	System.out.println("\n"+ map.entrySet().stream().max(Map.Entry.comparingByValue()).get());
 	
 	System.out.println("done with this");
+	
+	
 	}
 }
