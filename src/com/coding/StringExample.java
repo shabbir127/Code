@@ -21,6 +21,20 @@ public class StringExample {
 	
 	System.out.println("done with this");
 	
+	int n=10;
 	
+	int a=0;
+	int b=1;
+	int sum;
+	
+	System.out.println("Stating from here:-" + a + " "+b);
+	for(int i=1 ;i<=n;i++)
+	{
+		sum=a+b;
+		a=b;
+		b=sum;
+		System.out.print(" "+ sum);
+	}
+
 	}
 }
