@@ -35,9 +35,6 @@ public class StringExample {
 		b=sum;
 		System.out.print(" "+ sum);
 	}
-
-	
-
 	
 	}
 }
