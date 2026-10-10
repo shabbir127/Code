@@ -16,6 +16,8 @@ public class DAS {
 		
 		List<String> names= Arrays.asList("java","springboot","python");
 		
+		
+		
 		List<String> firstname = Arrays.asList(
 			    "Amit", "Rahul", "Ankit", "Sneha", "Ajay", "Rohit"
 			);
@@ -51,6 +53,8 @@ public class DAS {
 	   
 	   Optional<Integer> secondMaxIntegers=number.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst();
 	   System.out.println(secondMaxIntegers);
+	   
+	   
 	   
 	   
 	   
