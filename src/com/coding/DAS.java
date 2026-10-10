@@ -16,7 +16,7 @@ public class DAS {
 		
 		List<String> names= Arrays.asList("java","springboot","python");
 		
-		
+		String findfirstchar="Shabbir";
 		
 		List<String> firstname = Arrays.asList(
 			    "Amit", "Rahul", "Ankit", "Sneha", "Ajay", "Rohit"
@@ -39,6 +39,7 @@ public class DAS {
 		long count=firstname.stream().filter(x->x.startsWith("A")).count();
 		System.out.println(count);
 		
+		
 	   int max=number.stream().max(Comparator.naturalOrder()).get();	
 	   System.out.println(max);
 	   
@@ -55,8 +56,9 @@ public class DAS {
 	   System.out.println(secondMaxIntegers);
 	   
 	   
-	   
-	   
+	  System.out.println(findfirstchar.chars().mapToObj(x->(char)x).findFirst());
+	  long lengthcount=names.stream().filter(x->x.length() > 4).count();
+	  System.out.println(lengthcount);
 	   
 	}
 
