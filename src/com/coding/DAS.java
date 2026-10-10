@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
@@ -47,6 +48,9 @@ public class DAS {
 	   
 	   List<Integer>duplicated=number.stream().distinct().collect(Collectors.toList());
 	   System.out.println(duplicated);
+	   
+	   Optional<Integer> secondMaxIntegers=number.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst();
+	   System.out.println(secondMaxIntegers);
 	   
 	   
 	   
