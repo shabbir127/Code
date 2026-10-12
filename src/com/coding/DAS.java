@@ -59,7 +59,13 @@ public class DAS {
 	  System.out.println(findfirstchar.chars().mapToObj(x->(char)x).findFirst());
 	  long lengthcount=names.stream().filter(x->x.length() > 4).count();
 	  System.out.println(lengthcount);
+	  
+	  List<Integer> convertedString=number.stream().filter(x->String.valueOf(x).startsWith("1")).toList();
+	  System.out.println(convertedString);
 	   
+	  
+	  int sum=number.stream().mapToInt(x->x).sum();
+	  System.out.println(sum);
 	}
 
 }
