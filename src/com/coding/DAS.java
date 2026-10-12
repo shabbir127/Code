@@ -66,6 +66,10 @@ public class DAS {
 	  
 	  int sum=number.stream().mapToInt(x->x).sum();
 	  System.out.println(sum);
+	  
+	  double averge=number.stream().mapToInt(x->x).average().getAsDouble();
+	  System.out.println(averge);
+	  
 	}
 
 }
