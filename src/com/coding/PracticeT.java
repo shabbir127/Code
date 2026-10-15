@@ -10,9 +10,23 @@ public class PracticeT  extends Thread{
 	public static void main(String[] args) {
 		
 		PracticeT P1=new PracticeT();
-		
-		P1.run();
-		P1.start();
+		Thread R1=new Thread();
+		R1.start();//-----> new thread is executing
+		R1.run();//-----> main thread is executing
+		P1.run();//-----> main thread is executing
+		P1.start();//-----> new thread is executing
 	}
 
+}
+
+class PracticeR implements Runnable{
+
+	@Override
+	public void run() {
+		System.out.println("Running the implemneted Runnable interface....");
+		
+	}
+	
+	
+	
 }
