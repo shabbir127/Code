@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
@@ -70,6 +71,19 @@ public class DAS {
 	  double averge=number.stream().mapToInt(x->x).average().getAsDouble();
 	  System.out.println(averge);
 	  
+	  int maxiumum=number.stream().mapToInt(x->x).max().getAsInt();
+	  System.out.println(maxiumum);
+	  
+	  Map<Integer, Long> repeatingNumber=number.stream().collect(Collectors.groupingBy(x->x,Collectors.counting()));
+	  System.out.println(repeatingNumber);
+	  
+	  List<Integer> duplicates = repeatingNumber.entrySet()
+		        .stream()
+		        .filter(entry -> entry.getValue() > 1)
+		        .map(entry -> entry.getKey())
+		        .collect(Collectors.toList());
+
+		System.out.println(duplicates);
 	}
 
 }
