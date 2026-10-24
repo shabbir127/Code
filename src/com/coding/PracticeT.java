@@ -54,9 +54,7 @@ public class PracticeT  extends Thread{
 	              + Thread.currentThread().getName());
 	  });
 
-	  executor.shutdown();
-	  
-		
+	  executor.shutdown();	
 	}
 
 }
