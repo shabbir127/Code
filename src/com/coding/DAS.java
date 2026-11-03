@@ -82,6 +82,8 @@ public class DAS {
 		        .collect(Collectors.toList());
 
 		System.out.println(duplicates);
+	
+	
 	}
 
 }
